@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asteroid Dashboard</title>
+</head>
+<body>
+
+<h1>🚀 Asteroid Risk Dashboard</h1>
+
+<button onclick="loadData()">Load Asteroids</button>
+
+<div id="data"></div>
+
+<script>
+async function loadData() {
+    let res = await fetch("http://127.0.0.1:8000/api/asteroids/");
+    let data = await res.json();
+
+    let html = "";
+
+    data.all.forEach(a => {
+        html += `
+        <div style="border:1px solid black; padding:10px; margin:10px;">
+            <h3>${a.name}</h3>
+            <p>Diameter: ${a.diameter}</p>
+            <p>Velocity: ${a.velocity}</p>
+            <p>Distance: ${a.distance}</p>
+            <p>Risk: ${a.risk_level}</p>
+        </div>
+        `;
+    });
+
+    document.getElementById("data").innerHTML = html;
+}
+</script>
+
+</body>
+</html>
