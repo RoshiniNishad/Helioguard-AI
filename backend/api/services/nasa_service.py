@@ -1,7 +1,7 @@
 import requests
 
 def fetch_asteroids():
-    url = "https://api.nasa.gov/neo/rest/v1/feed?api_key=DEMO_KEY"
+    url = "https://api.nasa.gov/neo/rest/v1/feed?api_key=FpTu44Af7fyYgZzk1mfgjdmQUK9cAsqRhQWKzpcB"
     data = requests.get(url).json()
 
     asteroids = []

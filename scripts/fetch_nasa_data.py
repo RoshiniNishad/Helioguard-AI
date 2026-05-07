@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 
-API_KEY = "DEMO_KEY"   # baad me apna key daalna
+API_KEY = "FpTu44Af7fyYgZzk1mfgjdmQUK9cAsqRhQWKzpcB"   
 
 url = f"https://api.nasa.gov/neo/rest/v1/feed?api_key={API_KEY}"
 response = requests.get(url)
