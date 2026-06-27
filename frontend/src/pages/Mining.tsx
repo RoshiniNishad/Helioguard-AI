@@ -131,7 +131,7 @@ const Mining = () => {
 
       toast.loading("Analyzing asteroid...");
 
-      const res = await axios.get("http://127.0.0.1:8000/api/mining/");
+      const res = await axios.get("http://13.60.215.126/api/mining/");
 
       const data: AsteroidResult[] = res.data;
 

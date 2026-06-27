@@ -48,11 +48,11 @@ const Dashboard = () => {
       ] = await Promise.all([
 
         axios.get(
-          "http://127.0.0.1:8000/api/asteroids/"
+          "http://13.60.215.126/api/asteroids/"
         ),
 
         axios.get(
-          "http://127.0.0.1:8000/api/database-asteroids/"
+          "http://13.60.215.126/api/database-asteroids/"
         ),
       ]);
 

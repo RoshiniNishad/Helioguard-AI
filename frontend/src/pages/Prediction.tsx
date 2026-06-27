@@ -53,7 +53,7 @@ const Prediction = () => {
     try {
       toast.loading("Analyzing with AI...");
 
-      const res = await axios.get("http://127.0.0.1:8000/api/asteroids/");
+      const res = await axios.get("http://13.60.215.126/api/asteroids/");
       const data = res.data;
 
       const scored = data.map((a: any) => {
